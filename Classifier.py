@@ -7,6 +7,7 @@ import matplotlib as plt
 sf = tc.SFrame.read_csv('Classifier/yelp-data.csv', header = True)
 
 sf.print_rows(10)
+sf.shape
 sf.dtype
 # Restaurants with rating >=3 are good
 sf.groupby('stars', tc.aggregate.COUNT)
@@ -36,4 +37,4 @@ classifier_evaluation
 
 
 # Save the classifer_model
-classifer_model.save('Classifiers/basic_classifier.model')
+classifer_model.save('Classifier/basic_classifier.model')
