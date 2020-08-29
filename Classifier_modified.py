@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 %matplotlib inline
 # Read in Data
-sf = tc.SFrame.read_csv('Classifiers/yelp-data.csv', header = True)
+sf = tc.SFrame.read_csv('Classifier/yelp-data.csv', header = True)
 
 sf.print_rows(5)
 
@@ -49,7 +49,7 @@ for dict in evaluations:
             xs.append(tc.SArray.to_numpy(val['fpr']))
             ys.append(tc.SArray.to_numpy(val['tpr']))
 
-output_file("Classifiers/classifier comparison.html")
+output_file("classifier comparison.html")
 
 p = figure(plot_width=750, plot_height=800, title = "FPR VS TPR for various models")
 p.xaxis.axis_label = "FPR"

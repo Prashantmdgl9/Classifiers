@@ -4,7 +4,8 @@ import pandas as pd
 import matplotlib as plt
 
 # Data Import
-sf = tc.SFrame.read_csv('Classifiers/yelp-data.csv', header = True)
+sf = tc.SFrame.read_csv('Classifier/yelp-data.csv', header = True)
+
 sf.print_rows(10)
 sf.dtype
 # Restaurants with rating >=3 are good
